@@ -37,7 +37,7 @@ public class RF16Tests {
 			);
 	
 		Assert.assertEquals(
-					"@delucas El próximo evento es: 21/7/2018 0:0:0 cumpleaños de marcos",
+					"@delucas El próximo evento es: 21/7/2018 0:0:0 cumpleaños de marcos y faltan 28 días",
 					jenkins.escuchar("@jenkins cual es mi proximo evento?")
 				);
 	}

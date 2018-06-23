@@ -182,6 +182,18 @@ public class Fecha implements Comparable<Fecha> {
 	
 	
 
+	public int diferenciaDeDias() {
+		final long MILLSECS_PER_DAY = 24 * 60 * 60 * 1000; // Milisegundos al día 
+		//Date hoy = new Date();
+		
+		Calendar hCal = new GregorianCalendar(2018, 5, 23);
+		Date hoy = new Date(hCal.getTimeInMillis());
+		
+		Calendar calendar = new GregorianCalendar(this.año, this.mes-1, this.dia);
+		Date fecha = new Date(calendar.getTimeInMillis());
+		
+		return Math.round((fecha.getTime() - hoy.getTime())/MILLSECS_PER_DAY);
+	}
 
 	public String[] formato_hora =	{"H:MM_AM", "HH:MM_AM", "H:MM:SS_AM", "HH:MM:SS_AM",
 									 "H:MM", "HH:MM", "H:MM:SS", "HH:MM:SS"};

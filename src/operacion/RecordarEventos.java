@@ -101,7 +101,7 @@ public class RecordarEventos implements Operacion {
 					Fecha fec = e.getFecha();
 					fec.restaFechas_Dias(actual);
 					*/
-					return pedido.getNameUsuario() + " El próximo evento es: " + e.toString().trim();
+					return pedido.getNameUsuario() + " El próximo evento es: " + e.toString().trim() + " y faltan " + e.getFecha().diferenciaDeDias() + " días";
 				}
 				else {
 					return pedido.getNameUsuario() + " No tenés eventos";
