@@ -28,6 +28,7 @@ public class Interpretacion implements Operacion{
 		Operacion Convertir = new Convertir();
 		Operacion LeyesRobotica = new LeyesRobotica();
 		Operacion ChuckNorrisFacts = new ChuckNorrisFacts();
+		Operacion Deuda = new Deuda();
 		Operacion RecordarEventos = new RecordarEventos();
 		Operacion Default = new Default();
 		
@@ -41,8 +42,10 @@ public class Interpretacion implements Operacion{
 		Juego.siguiente(Convertir);
 		Convertir.siguiente(LeyesRobotica);
 		LeyesRobotica.siguiente(ChuckNorrisFacts);
-		ChuckNorrisFacts.siguiente(RecordarEventos);
+		ChuckNorrisFacts.siguiente(Deuda);
+		Deuda.siguiente(RecordarEventos);
 		RecordarEventos.siguiente(Default);
+
 		
 	}
 

@@ -107,7 +107,6 @@ public class Evento implements Comparable<Evento> {
 				
 				
 			}
-
 			Collections.sort(eventos);
 			
 			sc.close();
@@ -121,7 +120,6 @@ public class Evento implements Comparable<Evento> {
 	public boolean guardarEvento()
 	{
 		File path_event = new File("eventos.dat");
-		
 		FileWriter fichero = null;
         PrintWriter pw = null;
         try

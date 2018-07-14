@@ -114,7 +114,7 @@ public class FechaNoActual implements Operacion{
 		String respuesta = null;
 		Fecha fechaActual = new Fecha();
 		Fecha fechaPasado = null;
-		String regex_TiempoDesde = ".*(?:pasaron desde el) (\\d+) (?:de|) ([a-zA-Z]*) (?:de) (\\d+) ?.";
+		String regex_TiempoDesde = ".*(?:pasaron desde el) (\\d+) (?:de) ([a-zA-Z]*) (?:de) (\\d+) ?.";
 		Pattern pattern_TiempoDesde = Pattern.compile(regex_TiempoDesde, Pattern.CASE_INSENSITIVE | Pattern.UNICODE_CASE);
 		Matcher matcher_TiempoDesde = pattern_TiempoDesde.matcher(pedido.getMensaje());
 		while(matcher_TiempoDesde.find()) {
