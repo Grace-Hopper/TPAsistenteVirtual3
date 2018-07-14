@@ -53,7 +53,7 @@ public class RF12Tests {
 		Assert.assertEquals(
 				"@delucas, la segundea ley de la robótica es: \n" +
 				"Un robot debe cumplir las órdenes dadas por los seres humanos, a excepción de aquellas que entrasen en conflicto con la primera ley.",
-				jenkins.escuchar("@jenkins dime la segundea ley de la robótica.")
+				jenkins.escuchar("@jenkins dime la segunda ley de la robótica.")
 			);	
 
 		Assert.assertEquals(
